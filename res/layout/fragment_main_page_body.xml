@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/layout_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" >
+
+        <ImageView
+            android:id="@+id/iv_bg_begin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_haze_begin" />
+
+        <LinearLayout
+            android:id="@+id/tv_linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_bg_begin"
+            android:background="@drawable/bg_haze_repeat"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal"
+            android:tileMode="repeat" >
+
+            <TextView
+                android:id="@+id/tv_warninfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="高温红色警报"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_warn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/whightemp_red" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_linear"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_haze_end" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/iv_mascot_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:paddingBottom="140dp" >
+
+        <ImageView
+            android:id="@+id/iv_mascot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/f_normal01" />
+
+        <ImageView
+            android:id="@+id/iv_mascot_anim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@anim/bome2"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <com.maxtain.bebe.pulltorefresh.PtrFrameLayout
+        xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/material_style_ptr_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_info"
+        cube_ptr:ptr_duration_to_close="300"
+        cube_ptr:ptr_duration_to_close_header="2000"
+        cube_ptr:ptr_keep_header_when_refresh="true"
+        cube_ptr:ptr_pull_to_fresh="false"
+        cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+        cube_ptr:ptr_resistance="1.7" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" />
+    </com.maxtain.bebe.pulltorefresh.PtrFrameLayout>
+
+    <TextView
+        android:id="@+id/tv_tip"
+        style="@style/text_shadow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.5"
+        android:paddingTop="145dp"
+        android:text="@string/onewords_def"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="14sp" />
+
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3E9286"
+    android:orientation="vertical"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp"
+    android:paddingTop="55dp" >
+
+    <TextView
+        android:id="@+id/static_bind_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:gravity="left"
+        android:text="输入已绑定用户"
+        android:textColor="#fff"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/static_emailx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/static_bind_title"
+        android:layout_marginBottom="4dp"
+        android:gravity="left"
+        android:text="邮箱/手机号"
+        android:textColor="#fff" />
+
+    <EditText
+        android:id="@+id/username_upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/static_emailx"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/bind_confirm_btn"
+        style="@style/RightTextView"
+        android:text="确认"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/bind_cancel_btn"
+        style="@style/LeftTextView"
+        android:layout_alignBaseline="@+id/bind_confirm_btn"
+        android:layout_alignBottom="@+id/bind_confirm_btn"
+        android:layout_toLeftOf="@+id/bind_confirm_btn"
+        android:text="取消" />
+
+</RelativeLayout>

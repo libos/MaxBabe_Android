@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4BB9D2"
+    android:orientation="vertical"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:paddingTop="55dp" >
+
+    <TextView
+        android:id="@+id/baby_name_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
+        android:text="给您的宝宝先取个名字吧"
+        android:textColor="#fff" />
+
+    <TextView
+        android:id="@+id/static_xingming"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/baby_name_title"
+        android:layout_marginBottom="4dp"
+        android:gravity="left"
+        android:text="姓名"
+        android:textColor="#fff"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/baby_name_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/static_xingming"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/baby_name_confirm_btn"
+        style="@style/RightTextView"
+        android:text="确定"
+         />
+
+    <Button
+        android:id="@+id/baby_name_cancel_btn"
+        style="@style/LeftTextView"
+        android:layout_alignBaseline="@+id/baby_name_confirm_btn"
+        android:layout_alignBottom="@+id/baby_name_confirm_btn"
+        android:layout_toLeftOf="@+id/baby_name_confirm_btn"
+        android:text="取消"
+         />
+
+</RelativeLayout>

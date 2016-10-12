@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/city_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/iv_back"
+        style="@style/DirectionIcon"
+        android:src="@drawable/icon_back" />
+
+    <TextView
+        style="@style/DirectionTextView"
+        android:layout_toRightOf="@id/iv_back"
+        android:text="@string/choose_city" />
+
+    <ImageView
+        android:id="@+id/iv_search"
+        style="@style/DirectionIcon"
+        android:layout_alignParentRight="true"
+        android:paddingRight="15dp"
+        android:src="@drawable/icon_search" />
+
+    <RelativeLayout
+        android:id="@+id/layout_auto"
+        style="@style/ListInfoView"
+        android:layout_below="@id/iv_back"
+        android:layout_marginTop="30dp"
+        android:background="@color/lightblue" >
+
+        <ImageView
+            android:id="@+id/iv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/icon_list_location" />
+
+        <TextView
+            android:id="@+id/tv_autolocate"
+            style="@style/TextView"
+            android:layout_toRightOf="@id/iv_location"
+            android:background="@color/lightblue"
+            android:paddingLeft="10dp"
+            android:text="@string/auto_locating" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_manual"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/layout_auto"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_manual"
+            style="@style/TextView"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/hand_choose"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/input_city"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_box"
+            android:gravity="center_horizontal"
+            android:hint="@string/city_search_hint"
+            android:lineSpacingMultiplier="1.5"
+            android:maxLength="10"
+            android:paddingBottom="5dp"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textColorHint="#99ffffff"
+            android:textCursorDrawable="@null"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/list_citys"
+            style="@style/ListView"
+            android:minHeight="180dp" >
+        </ListView>
+        <!-- android:layout_below="@+id/input_city" -->
+    </LinearLayout>
+
+</RelativeLayout>

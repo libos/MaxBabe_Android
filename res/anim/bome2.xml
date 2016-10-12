@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frame_anim"
+    android:oneshot="true" >
+
+    <item
+        android:drawable="@drawable/bomb201"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/bomb202"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/bomb203"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/bomb204"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/bomb205"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/bomb206"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/bomb207"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/bomb208"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/bomb209"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/bomb210"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/bomb211"
+        android:duration="100"/>
+
+</animation-list>

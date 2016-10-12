@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3E9286"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="133dp"
+        android:layout_height="133dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/image_eyes" />
+
+    <TextView
+        style="@style/InfoTextView"
+        android:text="您还未添加任何设备" />
+
+    <ListView
+        android:id="@+id/id_listview_devices"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="50dp"
+        android:background="#529D92" />
+
+    <TextView
+        style="@style/InfoTextView"
+        android:text="添加设备" />
+
+    <Button
+        android:id="@+id/id_add_new_device"
+        style="@style/Btns"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="30dp"
+        android:text="新设备"
+         />
+
+    <Button
+        android:id="@+id/id_add_used_device"
+        style="@style/Btns"
+        android:layout_gravity="center_horizontal"
+        android:text="已绑定设备" />
+
+</LinearLayout>

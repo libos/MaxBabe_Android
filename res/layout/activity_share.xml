@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical|center_horizontal"
+    android:background="#009688" >
+
+    <ImageView
+        android:id="@+id/iv_share_close"
+        style="@style/DirectionIcon"
+        android:src="@drawable/icon_close" />
+
+    <ImageView
+        android:id="@+id/iv_share_icon"
+        style="@style/DirectionIcon"
+        android:layout_alignParentRight="true"
+        android:paddingRight="15dp"
+        android:src="@drawable/icon_share"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/canvas"
+        android:layout_width="320dp"
+        android:layout_height="404dp"
+        android:layout_below="@+id/iv_share_close"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/canvas_bg"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/canvas_background_img"
+            android:layout_width="300dp"
+            android:layout_height="384dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/night_cloudy01" />
+
+        <ImageView
+            android:id="@+id/canvas_figure_img"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="11dp"
+            android:src="@drawable/f_midnight01" />
+
+        <TextView
+            android:id="@+id/canvas_temp"
+            style="@style/text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="63dp"
+            android:fontFamily="sans-serif-thin"
+            android:text="00"
+            android:textColor="#fff"
+            android:textSize="70sp" />
+
+        <TextView
+            android:id="@+id/canvas_oooo"
+            style="@style/text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/canvas_temp"
+            android:layout_alignBottom="@+id/canvas_temp"
+            android:layout_toRightOf="@+id/canvas_temp"
+            android:fontFamily="sans-serif-thin"
+            android:text="°"
+            android:textColor="#fff"
+            android:textSize="70sp" />
+
+        <TextView
+            android:id="@+id/canvas_weather"
+            style="@style/text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/canvas_oooo"
+            android:layout_alignBottom="@+id/canvas_oooo"
+            android:layout_alignLeft="@+id/canvas_oooo"
+            android:text="晴"
+            android:textColor="#fff"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/canvas_oneword"
+            style="@style/text_shadow"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/canvas_weather"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="-2dp"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="3dp"
+            android:lineSpacingMultiplier="1.3"
+            android:text="寂寞的夜晚，你是否还是一个人入眠。寂寞的夜晚，你是否还是一个人入眠。"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/canvas_username"
+            style="@style/text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/canvas_oneword"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:gravity="center_horizontal"
+            android:text="By MaxBabe"
+            android:textColor="#fff"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/canvas_city"
+            style="@style/text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="9dp"
+            android:text="北京"
+            android:textColor="#fff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/canvas_date"
+            style="@style/text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/canvas_city"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:text="2015年5月14日"
+            android:textColor="#fff"
+            android:textSize="9sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/share_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/canvas"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/share_tips"
+        android:textColor="#fff"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/tv_share_btn"
+        style="@style/Btns"
+        android:layout_below="@+id/share_tip"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:text="@string/share_mode" />
+
+</RelativeLayout>

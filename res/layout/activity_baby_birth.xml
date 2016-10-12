@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4BB9D2"
+    android:orientation="vertical"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp"
+    android:paddingTop="55dp" >
+
+    <TextView
+        android:id="@+id/birthday_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="45dp"
+        android:gravity="center_horizontal"
+        android:text="生日是？"
+        android:textColor="#fff"
+        android:textSize="20dp" />
+
+    <net.kapati.widgets.DatePicker
+        android:id="@+id/birth_date_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/birthday_title"
+        android:layout_centerHorizontal="true"
+        android:textColor="#fff"
+        android:textSize="16dp" />
+
+    <Button
+        android:id="@+id/baby_birth_confirm_btn"
+        style="@style/RightTextView"
+        android:text="确定"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/baby_birth_cancel_btn"
+        style="@style/LeftTextView"
+        android:layout_alignBaseline="@+id/baby_birth_confirm_btn"
+        android:layout_alignBottom="@+id/baby_birth_confirm_btn"
+        android:layout_toLeftOf="@+id/baby_birth_confirm_btn"
+        android:text="上一步"
+         />
+
+    <RelativeLayout
+        android:id="@+id/static_time_calc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/baby_birth_confirm_btn"
+        android:layout_marginBottom="35dp"
+        android:gravity="center_horizontal"
+        android:visibility="invisible" >
+
+        <ImageView
+            android:id="@+id/static_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_agetime" />
+
+        <TextView
+            android:id="@+id/baby_birth_time_calc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="2个月零10天"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/figure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/static_time_calc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/f_normal05"
+        android:visibility="invisible" />
+
+</RelativeLayout>

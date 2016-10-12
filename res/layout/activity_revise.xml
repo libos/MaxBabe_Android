@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue" >
+
+    <LinearLayout
+        android:id="@+id/ll_revise"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_revise_title"
+            style="@style/reg_title"
+            android:text="修改" />
+
+        <TextView
+            android:id="@+id/tv_new_title"
+            style="@style/reg_subtitle"
+            android:text="新" />
+
+        <EditText
+            android:id="@+id/tv_revise_new"
+            style="@style/reg_inputbox" />
+
+        <LinearLayout
+            android:id="@+id/sex_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/subtl23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="2dp"
+                android:background="@android:color/transparent"
+                android:gravity="left"
+                android:text="@string/reg_sex"
+                android:textAlignment="gravity"
+                android:textColor="#E6E7E8"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:id="@+id/sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/customer_add_radio_sex_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio_btn"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="60dp"
+                    android:tag="1"
+                    android:text="@string/male"
+                    android:textColor="#e6e7e8" />
+
+                <RadioButton
+                    android:id="@+id/customer_add_radio_sex_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio_btn"
+                    android:checked="true"
+                    android:paddingLeft="5dp"
+                    android:tag="0"
+                    android:text="@string/female"
+                    android:textColor="#e6e7e8" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_password"
+            style="@style/reg_subtitle"
+            android:text="@string/input_password" />
+
+        <EditText
+            android:id="@+id/ed_password"
+            style="@style/reg_inputbox"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/warning_tip"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:background="#FFB300"
+        android:gravity="center"
+        android:textAlignment="gravity"
+        android:textColor="#fff"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/confirm_btn"
+        style="@style/RightTextView"
+        android:text="@string/modify"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/cancel_btn"
+        style="@style/LeftTextView"
+        android:layout_alignBaseline="@+id/confirm_btn"
+        android:layout_alignBottom="@+id/confirm_btn"
+        android:layout_toLeftOf="@+id/confirm_btn"
+        android:text="@string/cancel" />
+
+</RelativeLayout>

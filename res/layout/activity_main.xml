@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#000000"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/background_image_blur"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#000000"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/background_image"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/daytime_clear01" />
+    </RelativeLayout>
+
+    <fragment
+        android:id="@+id/id_fragment_title"
+        android:name="com.maxtain.bebe.MainPageTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="53dp" />
+
+    <fragment
+        android:id="@+id/id_fragment_body"
+        android:name="com.maxtain.bebe.MainPageBody"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_fragment_title" />
+
+    <fragment
+        android:id="@+id/id_fragment_bottom"
+        android:name="com.maxtain.bebe.MainPageBottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <!--
+         <fragment
+        android:id="@+id/id_fragment_content"
+        android:name="com.zhy.zhy_fragments.ContentFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/id_fragment_title" />
+    -->
+
+</RelativeLayout>

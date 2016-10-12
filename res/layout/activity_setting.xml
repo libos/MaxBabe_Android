@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/iv_close"
+        style="@style/DirectionIcon"
+        android:src="@drawable/icon_close" />
+
+    <ImageView
+        android:id="@+id/iv_mascot4"
+        style="@style/MascotIcon"
+        android:src="@drawable/mascot_state4" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_mascot4"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="@string/version"
+        android:textColor="#fff"
+        android:textSize="16sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_mascot4"
+        android:layout_marginTop="20dp"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rl_login"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/lightblue"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="20dp"
+                    android:text="@string/login"
+                    android:textColor="#fff"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/login_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/image_account_list" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_account"
+                style="@style/TextView"
+                android:background="@color/lightblue"
+                android:text="@string/account"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_weatherset"
+                style="@style/TextView"
+                android:text="@string/weather_set" />
+
+            <TextView
+                android:id="@+id/tv_aboutus"
+                style="@style/TextView"
+                android:background="@color/lightblue"
+                android:text="@string/about_us" />
+
+            <TextView
+                android:id="@+id/tv_monitoradd"
+                style="@style/TextView"
+                android:background="@color/lightblue"
+                android:text="@string/add_device"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_bebeinfo"
+                style="@style/TextView"
+                android:text="@string/baby_info"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

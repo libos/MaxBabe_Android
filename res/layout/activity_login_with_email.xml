@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue" >
+
+    <LinearLayout
+        android:id="@+id/ll_login"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tl1"
+            style="@style/reg_title"
+            android:text="@string/login" />
+
+        <TextView
+            android:id="@+id/subtl1"
+            style="@style/reg_subtitle"
+            android:text="@string/reg_username_or_phone" />
+
+        <EditText
+            android:id="@+id/username"
+            style="@style/reg_inputbox" />
+
+        <TextView
+            android:id="@+id/subtl2"
+            style="@style/reg_subtitle"
+            android:text="@string/reg_password" />
+
+        <EditText
+            android:id="@+id/password"
+            style="@style/reg_inputbox"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/warning_tip"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:background="#FFB300"
+        android:gravity="center"
+        android:textAlignment="gravity"
+        android:textColor="#fff"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/login_btn"
+        style="@style/RightTextView"
+        android:text="@string/login"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/cancel_btn"
+        style="@style/LeftTextView"
+        android:layout_alignBaseline="@+id/login_btn"
+        android:layout_alignBottom="@+id/login_btn"
+        android:layout_toLeftOf="@+id/login_btn"
+        android:text="@string/cancel" />
+
+    <TextView
+        android:id="@+id/forget_pwd"
+        style="@style/Forget_LeftTextView"
+        android:layout_alignBaseline="@+id/login_btn"
+        android:text="@string/forget_password" />
+
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue" >
+
+    <ImageView
+        android:id="@+id/iv_back"
+        style="@style/DirectionIcon"
+        android:src="@drawable/icon_back" />
+
+    <TextView
+        style="@style/DirectionTextView"
+        android:layout_toRightOf="@id/iv_back"
+        android:text="@string/weather_set" />
+
+    <RelativeLayout
+        android:id="@+id/layout_send"
+        style="@style/ListInfoView"
+        android:layout_below="@id/iv_back"
+        android:layout_marginTop="20dp"
+        android:background="@color/lightblue" >
+
+        <TextView
+            android:id="@+id/tv_send"
+            style="@style/TextView"
+            android:background="@color/lightblue"
+            android:text="@string/push_msg" />
+
+        <ToggleButton
+            android:id="@+id/iv_send"
+            style="@style/ToogleButton"
+            android:checked="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_auto"
+        style="@style/ListInfoView"
+        android:layout_below="@id/layout_send" >
+
+        <TextView
+            android:id="@+id/tv_auto"
+            style="@style/TextView"
+            android:text="@string/automatic_update" />
+
+        <ToggleButton
+            android:id="@+id/iv_auto"
+            style="@style/ToogleButton"
+            android:checked="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_wifi"
+        style="@style/ListInfoView"
+        android:layout_below="@id/layout_auto"
+        android:background="@color/lightblue" >
+
+        <TextView
+            android:id="@+id/tv_wifi"
+            style="@style/TextView"
+            android:background="@color/lightblue"
+            android:text="@string/only_wifi" />
+
+        <ToggleButton
+            android:id="@+id/iv_wifi"
+            style="@style/ToogleButton" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_notificate"
+        style="@style/ListInfoView"
+        android:layout_below="@id/layout_wifi" >
+
+        <TextView
+            android:id="@+id/tv_notificate"
+            style="@style/TextView"
+            android:text="@string/noti_setting" />
+
+        <ToggleButton
+            android:id="@+id/iv_notificate"
+            style="@style/ToogleButton"
+            android:checked="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_gps"
+        style="@style/ListInfoView"
+        android:layout_below="@id/layout_notificate"
+        android:background="@color/lightblue" >
+
+        <TextView
+            android:id="@+id/tv_gps"
+            style="@style/TextView"
+            android:background="@color/lightblue"
+            android:text="@string/gps_setting" />
+
+        <ToggleButton
+            android:id="@+id/iv_gps"
+            style="@style/ToogleButton"
+            android:checked="false" />
+    </RelativeLayout>
+
+</RelativeLayout>

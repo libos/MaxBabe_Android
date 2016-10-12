@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/iv_back"
+        style="@style/DirectionIcon"
+        android:src="@drawable/icon_back" />
+
+    <TextView
+        style="@style/DirectionTextView"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/iv_back"
+        android:text="宝宝信息" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/iv_back"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rl_bebe_name"
+            style="@style/ListInfoView"
+            android:background="@color/lightblue" >
+
+            <TextView
+                android:id="@+id/bebe_name"
+                style="@style/BebeTextView"
+                android:layout_alignParentLeft="true"
+                android:text="果儿" />
+
+            <TextView
+                android:id="@+id/revise_name"
+                style="@style/BebeTextView"
+                android:layout_alignParentRight="true"
+                android:text="修改" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_bebe_gender"
+            style="@style/ListInfoView" >
+
+            <TextView
+                android:id="@+id/bebe_gender"
+                style="@style/BebeTextView"
+                android:layout_alignParentLeft="true"
+                android:text="女" />
+
+            <TextView
+                android:id="@+id/revise_gender"
+                style="@style/BebeTextView"
+                android:layout_alignParentRight="true"
+                android:text="修改" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_bebe_birth"
+            style="@style/ListInfoView"
+            android:background="@color/lightblue" >
+
+            <TextView
+                android:id="@+id/bebe_birth"
+                style="@style/BebeTextView"
+                android:layout_alignParentLeft="true"
+                android:text="2015年4月8日" />
+
+            <TextView
+                android:id="@+id/revise_birth"
+                style="@style/BebeTextView"
+                android:layout_alignParentRight="true"
+                android:text="修改" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

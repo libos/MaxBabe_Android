@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp"
+    android:paddingTop="70dp" >
+
+    <TextView
+        android:id="@+id/tv_revise_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="修改"
+        android:textColor="#fff"
+        android:textSize="22sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_revise_title"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal" >
+
+            <ToggleButton
+                android:id="@+id/boy_toggle_btn"
+                style="@style/boyToggleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/boy_toggle_bg"
+                android:checked="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal" >
+
+            <ToggleButton
+                android:id="@+id/girl_toggle_btn"
+                style="@style/girlToggleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/girl_toggle_bg" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/confirm_btn"
+        style="@style/RightTextView"
+        android:text="确定"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/cancel_btn"
+        style="@style/LeftTextView"
+        android:layout_alignBaseline="@+id/confirm_btn"
+        android:layout_alignBottom="@+id/confirm_btn"
+        android:layout_toLeftOf="@+id/confirm_btn"
+        android:text="取消"
+         />
+
+</RelativeLayout>

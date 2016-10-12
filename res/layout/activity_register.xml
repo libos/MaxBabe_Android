@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue" >
+
+    <LinearLayout
+        android:id="@+id/ll_step_1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tl1"
+            style="@style/reg_title"
+            android:text="@string/reg_new_title" />
+
+        <TextView
+            android:id="@+id/subtl1"
+            style="@style/reg_subtitle"
+            android:text="@string/reg_username" />
+
+        <EditText
+            android:id="@+id/username"
+            style="@style/reg_inputbox"
+            android:inputType="textEmailAddress" />
+
+        <TextView
+            android:id="@+id/subtl2"
+            style="@style/reg_subtitle"
+            android:text="@string/reg_password" />
+
+        <EditText
+            android:id="@+id/password"
+            style="@style/reg_inputbox"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_step_2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tl2"
+            style="@style/reg_title"
+            android:text="@string/reg_new_title2" />
+
+        <TextView
+            android:id="@+id/subtl21"
+            style="@style/reg_subtitle"
+            android:text="@string/reg_phone" />
+
+        <EditText
+            android:id="@+id/phone"
+            style="@style/reg_inputbox"
+            android:inputType="phone" />
+
+        <TextView
+            android:id="@+id/subtl22"
+            style="@style/reg_subtitle"
+            android:text="@string/reg_nickname" />
+
+        <EditText
+            android:id="@+id/nickname"
+            style="@style/reg_inputbox" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/subtl23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="2dp"
+                android:background="@android:color/transparent"
+                android:gravity="left"
+                android:text="@string/reg_sex"
+                android:textAlignment="gravity"
+                android:textColor="#E6E7E8"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:id="@+id/sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/customer_add_radio_sex_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio_btn"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="60dp"
+                    android:tag="1"
+                    android:text="@string/male"
+                    android:textColor="#e6e7e8" />
+
+                <RadioButton
+                    android:id="@+id/customer_add_radio_sex_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio_btn"
+                    android:checked="true"
+                    android:paddingLeft="5dp"
+                    android:tag="0"
+                    android:text="@string/female"
+                    android:textColor="#e6e7e8" />
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/warning_tip"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:background="#FFB300"
+        android:gravity="center"
+        android:textAlignment="gravity"
+        android:textColor="#fff"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/confirm_btn"
+        style="@style/RightTextView"
+        android:text="@string/confirm"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/cancel_btn"
+        style="@style/LeftTextView"
+        android:layout_alignBaseline="@+id/confirm_btn"
+        android:layout_alignBottom="@+id/confirm_btn"
+        android:layout_toLeftOf="@+id/confirm_btn"
+        android:text="@string/cancel" />
+
+</RelativeLayout>

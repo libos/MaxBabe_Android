@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!--
+    <item>
+        <bitmap
+            android:src="@drawable/diamond_upholstery"
+            android:tileMode="repeat" />
+    </item>
+    -->
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/splash" />
+    </item>
+    <!--
+         <item android:bottom="16dp">
+        <bitmap
+            android:gravity="bottom|center_horizontal"
+            android:src="@drawable/company_logo" />
+    </item>
+    -->
+
+</layer-list>
